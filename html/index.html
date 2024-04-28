@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swing by</title>
+
+    <!-- Minified version -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
+
+<main>
+    <h1>Swing-by service</h1>
+
+    <p>Intended to help in using Firefox's <i>insanely</i> great Tab Container feature.</p>
+
+    <p>If you point to this URL: ...</p>
+    <ul>
+        <li><code>this.url/some-word/twitter.com/flypenguin_de</code></li>
+    </ul>
+
+    <p>... it will redirect you to ...</p>
+
+    <ul>
+        <li><code>twitter.com/flypenguin_de</code></li>
+    </ul>
+
+    <p>... ignoring <code>some-word</code>, and keeping everything else (including query strings).</p>
+
+    <h2>Why is this useful?</h2>
+
+    <p>The usefulness lies in the <code>some-word</code> part of the original url, and the Firefox
+        addon <a href="https://addons.mozilla.org/de/firefox/addon/containerise/">Containerise</a>.
+        Generally you can now configure any <code>this.url/some-word/...</code> prefix to be opened
+        in a specific tab container, so you can open the same web service (e.g. Twitter, AWS, ...)
+        with different accounts in parallel, without any hassle.
+    </p>
+
+    <h2>What? How?</h2>
+
+    <p>Let's get concrete: Let's say, you want to separate some work-related stuff from
+        your private browsing, without opening two browsers. You simply need to save the following
+        bookmarks:</p>
+
+    <ul>
+        <li><code>this.url/business/gmail.com</code></li>
+        <li><code>this.url/business/12345678.signin.aws.amazon.com/console/</code></li>
+        <li><code>this.url/business/teams.microsoft.com</code> (oh that one is <i>so</i> useful!)</li>
+    </ul>
+
+    <p>Now, you configure Containerise to open <code>this.url/business/*</code> in the tab container
+        "business". In that container, you can log in to all those services – and those logins will
+        <i>not</i> spill over into your "normal" browser tabs.
+    </p>
+
+    <p>Or, if you're a freelancer, you could do this:</p>
+
+    <ul>
+        <li><code>this.url/client1/teams.microsoft.com</code></li>
+        <li><code>this.url/client2/teams.microsoft.com</code></li>
+        <li><code>this.url/client3/teams.microsoft.com</code></li>
+    </ul>
+
+    <p>Then simply save them as bookmarks, log in with the respective accounts in the tab containers,
+        and you have fully isolated logins available at your fingertips.</p>
+
+    <p>If you now assign shortcuts to those bookmarks (e.g. <code>cl1-teams</code>, ...) then you can simply enter
+        "<code>cl1-teams</code>" into Firefox's address bar and open Microsoft Teams for "client1", logged in and ready,
+        "just like that". It does not get more convenient than this.</p>
+
+
+    <h1>Final words</h1>
+
+    <p>Firefox fucking rocks.</p>
+
+</main>
+
+<footer>
+    <p>(c) <a href="//flypenguin.de">flypenguin</a>, code licensed under <a
+            href="https://opensource.org/license/mit">MIT</a></p>
+</footer>
+
+</html>
