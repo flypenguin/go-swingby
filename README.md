@@ -1,2 +1,3 @@
 # go-swingby
-A "swing by" appliacation, see description
+
+A helper to be used with Firefox's "tab container" feature. More description forthcoming, this is not one yet.
