@@ -33,6 +33,15 @@ build: $(TARGET)-darwin-arm64
 .PHONY: build
 
 
+container: clean
+container:
+	podman build -t swingby .
+	podman tag swingby docker.io/flypenguin/swingby
+	podman push docker.io/flypenguin/swingby
+.PHONY: container
+
+
+
 clean:
 	rm -f $(TARGET)
 	rm -f $(TARGET)-darwin-arm64
