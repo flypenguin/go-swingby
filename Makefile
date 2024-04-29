@@ -35,7 +35,7 @@ build: $(TARGET)-darwin-arm64
 
 container-build: clean
 container-build:
-	podman build -t swingby .
+	podman build --arch amd64 -t swingby .
 	podman tag swingby docker.io/flypenguin/swingby
 .PHONY: container-build
 
